@@ -1,7 +1,7 @@
 {
     "version": "1.20.1",
     "description": "An innovative Zero-Trust computing solution for internet banking and e-government services",
-    "homepage": "https://yourtablecloth.app/",
+    "homepage": "https://github.com/yourtablecloth/TableCloth",
     "license": {
         "identifier": "Proprietary|AGPL-3.0",
         "url": "https://github.com/yourtablecloth/TableCloth/blob/main/LICENSE-COMMERCIAL|https://github.com/yourtablecloth/TableCloth/blob/main/LICENSE-AGPL"
