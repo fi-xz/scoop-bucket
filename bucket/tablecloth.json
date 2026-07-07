@@ -1,5 +1,5 @@
 {
-    "version": "1.20.1",
+    "version": "1.20.5",
     "description": "An innovative Zero-Trust computing solution for internet banking and e-government services",
     "homepage": "https://github.com/yourtablecloth/TableCloth",
     "license": {
@@ -9,8 +9,8 @@
     "extract_dir": "current",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.1/TableCloth_1.20.1.0_Release_x64_Portable.zip",
-            "hash": "625d166c399909f5cd3828f3f6275155af9cd983d3e9fd75345c7065b41e178c",
+            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.5/TableCloth_1.20.5.0_Release_x64_Portable.zip",
+            "hash": "de129430931f535e4dc5ffc528610adbdd59e1dfeb5ed6f66d80bd198048d8c0",
             "shortcuts": [
                 [
                     "TableCloth.exe",
@@ -19,8 +19,8 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.1/TableCloth_1.20.1.0_Release_arm64_Portable.zip",
-            "hash": "9aa03c86b0b826de33ccb00a9c1e5cca92f9b753395befa0042a6a51e47f2ca9",
+            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.5/TableCloth_1.20.5.0_Release_arm64_Portable.zip",
+            "hash": "bcb3a4c4d81df9b35e9b98457c8d492864db4bed6e01153c70412ccc3b594d71",
             "shortcuts": [
                 [
                     "TableCloth.exe",
@@ -48,10 +48,10 @@
         "    Set-Content -Path $targetJsonPath -Value $jsonContent -Encoding UTF8",
         "}"
     ],
-    "post_uninstall": [],
-    "persist": [
-        "Data"
+    "post_uninstall": [
+        
     ],
+    "persist": "Data",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
