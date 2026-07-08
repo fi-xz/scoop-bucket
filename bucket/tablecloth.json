@@ -1,6 +1,6 @@
 {
     "version": "1.20.5",
-    "description": "An innovative Zero-Trust computing solution for internet banking and e-government services",
+    "description": "Isolates South Korean internet banking and e-government services using Windows Sandbox.",
     "homepage": "https://github.com/yourtablecloth/TableCloth",
     "license": {
         "identifier": "Proprietary|AGPL-3.0",
