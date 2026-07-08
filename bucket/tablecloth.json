@@ -6,50 +6,31 @@
         "identifier": "Proprietary|AGPL-3.0",
         "url": "https://github.com/yourtablecloth/TableCloth/blob/main/LICENSE-COMMERCIAL|https://github.com/yourtablecloth/TableCloth/blob/main/LICENSE-AGPL"
     },
-    "extract_dir": "current",
     "architecture": {
         "64bit": {
             "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.5/TableCloth_1.20.5.0_Release_x64_Portable.zip",
-            "hash": "de129430931f535e4dc5ffc528610adbdd59e1dfeb5ed6f66d80bd198048d8c0",
-            "shortcuts": [
-                [
-                    "TableCloth.exe",
-                    "TableCloth"
-                ]
-            ]
+            "hash": "de129430931f535e4dc5ffc528610adbdd59e1dfeb5ed6f66d80bd198048d8c0"
         },
         "arm64": {
             "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.5/TableCloth_1.20.5.0_Release_arm64_Portable.zip",
-            "hash": "bcb3a4c4d81df9b35e9b98457c8d492864db4bed6e01153c70412ccc3b594d71",
-            "shortcuts": [
-                [
-                    "TableCloth.exe",
-                    "TableCloth"
-                ]
-            ]
+            "hash": "bcb3a4c4d81df9b35e9b98457c8d492864db4bed6e01153c70412ccc3b594d71"
         }
     },
+    "extract_dir": "current",
     "post_install": [
-        "# 1. 변수 정의",
         "$appDataDirName = \"TableCloth.Data\"",
         "$localAppDataPath = \"$env:LOCALAPPDATA\\$appDataDirName\"",
         "$targetJsonPath = \"$localAppDataPath\\Preferences.json\"",
         "$realSandboxDataPath = \"$persist_dir\\Data\"",
-        "# 2. Scoop Persist 영역에 실제 물리 폴더 생성",
         "if (!(Test-Path $realSandboxDataPath)) { New-Item -ItemType Directory -Path $realSandboxDataPath | Out-Null }",
-        "# 3. LocalAppData에 무한루프 방지를 위해 '일반 폴더'로 기본 디렉터리 생성",
         "if (!(Test-Path $localAppDataPath)) { New-Item -ItemType Directory -Path $localAppDataPath | Out-Null }",
-        "# 4. Preferences.json 파일 사전 생성 및 샌드박스 데이터 경로 주입",
-        "# 파일이 생성되는 순간 이미 LocalAppData 아래에 안착하므로 Sandbox 폴더와 꼬이지 않습니다.",
         "if (!(Test-Path $targetJsonPath)) {",
-        "    $jsonContent = @{",
-        "        'DataDirectoryHostPath' = $realSandboxDataPath",
-        "    } | ConvertTo-Json",
+        "    $jsonContent = @{ 'DataDirectoryHostPath' = $realSandboxDataPath } | ConvertTo-Json",
         "    Set-Content -Path $targetJsonPath -Value $jsonContent -Encoding UTF8",
         "}"
     ],
-    "post_uninstall": [
-        
+    "shortcuts": [
+        ["TableCloth.exe", "TableCloth"]
     ],
     "persist": "Data",
     "checkver": "github",
