@@ -1,5 +1,5 @@
 {
-    "version": "1.20.6",
+    "version": "1.20.9",
     "description": "Isolates South Korean internet banking and e-government services using Windows Sandbox.",
     "homepage": "https://github.com/yourtablecloth/TableCloth",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.6/TableCloth_1.20.6.0_Release_x64_Portable.zip",
-            "hash": "24f2e390e8a9989238603d8c46f4ceb7f33af3e80714d17f952fcb492d8b5d94"
+            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.9/TableCloth_1.20.9.0_Release_x64_Portable.zip",
+            "hash": "26288d362d1efaa1d90e062e1e016cc391db978bd8febfd0d26ec16657c88e6c"
         },
         "arm64": {
-            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.6/TableCloth_1.20.6.0_Release_arm64_Portable.zip",
-            "hash": "f7788e55425aff019e95b4010b639f5b3e9352e1b1848186f472db1737e5f5dc"
+            "url": "https://github.com/yourtablecloth/TableCloth/releases/download/v1.20.9/TableCloth_1.20.9.0_Release_arm64_Portable.zip",
+            "hash": "559563d4f39e81a66a402888a6fa117c97da0bb48f2bf0c16832605b8e06ad05"
         }
     },
     "extract_dir": "current",
